@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(215, 187, 193);
+}
+
+.new_navbar{
+    background: linear-gradient(to right,rgb(243, 187, 197),rgb(243, 229, 229));
+}
+
+.c_image{
+    height: 90vh;
+    object-fit: cover;
+}
+
+.about_img{
+    height: 500px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px 10px rgb(255, 228, 245);
+}
+
+.css_custom{
+    --primary_color : rgb(74, 74, 99);
+    --bs-tooltip-bg:var(--primary_color);
+    --bs-tooltip-color: var(--bs-white);
+}
+
+.container1{
+    border: 2px solid black;
+    box-shadow: 2px 2px 10px 3px rgb(81, 63, 63) ;
+}
