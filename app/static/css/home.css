@@ -1,9 +1,10 @@
 body{
-    background-color: rgb(215, 187, 193);
+    background-color: rgba(117, 53, 117, 0.279);
 }
 
 .new_navbar{
-    background: linear-gradient(to right,rgb(243, 187, 197),rgb(243, 229, 229));
+    background: linear-gradient(to left,rgb(232, 237, 164),rgb(239, 171, 237));
+    position: relative;
 }
 
 .c_image{
@@ -12,8 +13,8 @@ body{
 }
 
 .about_img{
-    height: 500px;
-    width: 350px;
+    height: 520px;
+    width: 400px;
     border-radius: 20px;
     box-shadow: 5px 5px 20px 10px rgb(255, 228, 245);
 }
@@ -26,5 +27,8 @@ body{
 
 .container1{
     border: 2px solid black;
-    box-shadow: 2px 2px 10px 3px rgb(81, 63, 63) ;
+    box-shadow: 10px 10px 30px 20px rgb(255, 226, 255) ;
+}
+.main{
+    color: blanchedalmond;
 }
