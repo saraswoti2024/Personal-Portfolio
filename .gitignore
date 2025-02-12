@@ -1,0 +1,40 @@
+*.txt
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Django
+*.log
+*.pot
+*.mo
+db.sqlite3
+*.sqlite3
+local_settings.py
+media/
+*.pyc
+__pycache__
+db.sqlite3
+media
+
+# Environment variables
+.env
+settings_local.py  # If you have a local settings file
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDEs
+.idea/
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+.directory
+
+code.txt
