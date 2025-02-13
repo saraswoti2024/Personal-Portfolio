@@ -20,8 +20,8 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto gap-5 p-2 mb-lg-0">
+          <div class="collapse navbar-collapse ms-5 " id="navbarSupportedContent">
+            <ul class="navbar-nav me-5 gap-5 p-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="#home" >Home</a>
               </li>
@@ -44,7 +44,7 @@
       </nav>
 
       <!-- carousel section -->
-      <div id="carouselExampleIndicators" class="carousel slide" id="home">
+      <!-- <div id="carouselExampleIndicators" class="carousel slide" id="home">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -54,9 +54,9 @@
           <div class="carousel-item active">
             <img src="{% static "images/purple.jpg" %}" class="d-block w-100 c_image" alt="...">
             <div class="carousel-caption top-0 my-2 d-none d-md-block">
-              <h5 class="my-3 fs-3 ">I am</h5>
-              <h4 class="my-3 fs-3 fw-bold"><b class="text-uppercase main">Saraswoti Khadka</b> </h4>
-              <a href="https://drive.google.com/file/d/12qV4nX0q8MT6kGyZweF79uCsXz0HsZUL/view?usp=sharing"><button class="btn btn-outline-warning rounded-5 border border-warning border-3">Resume</button></a>
+              <h5 class="my-3 fs-2 ">I am</h5>
+              <h4 class="my-3"><b class="main">Saraswoti Khadka</b> </h4>
+              <a href="https://drive.google.com/file/d/1qZmL58uVI5K6yquvRqc7MD-S6FjUsnN8/view?usp=sharing"><button class="btn btn-outline-warning rounded-3 border border-warning border-3">Resume</button></a>
             </div>
           </div>
           <div class="carousel-item">
@@ -74,23 +74,29 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
+      </div> -->
 
     <!-- About section -->
      <section class="aboutt" id="about">
       <div class="text-center about">
-        <h1 class="text-capitalize">About Me</h1>
-        <hr class="w-25 border-3 mx-auto text-black opacity-50">
         <div class="container">
-          <div class="row">
-            <div class="col-6">
-              <img src="{% static "images/me.jpg" %}" class="img-fluid about_img" alt="profile">
+          <div class="row mt-5">
+            <div class="col-3">
+              <a href="https://github.com/saraswoti2024"><button class="btn btn-outline-warning btn-lg text-black"><i class="fa-brands fa-github"></i>GitHub</button></a>
+              <a href="https://www.linkedin.com/in/saraswotikhadka1111/"><button class=" btn btn-outline-warning btn-lg text-black"><i class="fa-brands fa-linkedin"></i> Linkedin</button></a>
+              <a href="https://www.instagram.com/saraswoti1110"><button class="gap-5 mx-2 btn btn-outline-warning btn-lg text-black"><i class="fa-brands fa-instagram"></i>Instagram</button></a>
+              <a href="https://x.com/Saraswoti1110"><button class="gap-5 mx-2 btn btn-outline-warning btn-lg text-black"><i class="fa-brands fa-x-twitter"></i>Twitter</button></a>
             </div>
-            <div class="col-6 d-flex justify-content-center align-items-center flex-column">
-              <h1>My Journey</h1>
-              <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iste commodi voluptatem cumque, voluptates reiciendis velit corrupti impedit veritatis incidunt blanditiis consequuntur maxime architecto hic, minus exercitationem fugiat voluptatibus facere?</p>
-              <button class="btn btn-success" data-bs-toggle="tooltip" data-bs-title="Click to Learn More" 
-              data-bs-custom-class="css_custom" data-bs-placement="bottom">Learn More</button>
+
+            <div class="col-5 d-flex justify-content-center align-items-center flex-column">
+              <h2>I am <h1>Saraswoti Khadka</h1> </h2>
+              <p class="text-start">I am a hardworking and enthusiastic individual. From a young age, I have been versatile and active, always eager to learn and explore new areas. My dedication to continuous improvement drives me to seek out new challenges and opportunities for growth.</p>
+              <a href="https://drive.google.com/file/d/1qZmL58uVI5K6yquvRqc7MD-S6FjUsnN8/view?usp=sharing"><button class="btn edits" data-bs-toggle="tooltip" data-bs-title="Click to View My Resume" 
+              data-bs-custom-class="css_custom" data-bs-placement="top" >Resume</button></a>
+            </div>
+
+            <div class="col-4">
+              <img src="{% static "images/me.jpg" %}" class="img-fluid about_img" alt="profile">
             </div>
           </div>
         </div>
@@ -100,10 +106,9 @@
      <!-- project section start -->
       <section class="my-4" id="projects">
         <div class="service text-center">
-          <h1 class="text-capitalize text-black fw-bold">Projects</h1>
-          <hr class="w-25 border-3 text-black opacity-50 mx-auto">
+          <h1 class="text-capitalize text-black fw-bold mb-3 mt-5">Projects</h1>
         </div>
-        <div class="container bg-warning-subtle">
+        <div class="container cards">
           <div class="row">
             <div class="col-4 my-4">
               <div class="card mb-3" style="max-width: 540px;">
@@ -115,7 +120,7 @@
                     <div class="card-body">
                       <h5 class="card-title">E-commerce Website</h5>
                       <p class="card-text">E-commerce Website made in django. It is a website related to branded clothes based on Nepal</p>
-                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                      <a href="https://github.com/saraswoti2024/E-Commerce-Website"><button class="btn edit">Click to View</button></a>
                     </div>
                   </div>
                 </div>
@@ -131,7 +136,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                      <a href="https://github.com/saraswoti2024/E-Commerce-Website"><button class="btn edit">Click to View</button></a>
                     </div>
                   </div>
                 </div>
@@ -147,13 +152,60 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                      <a href="https://github.com/saraswoti2024/E-Commerce-Website"><button class="btn edit">Click to View</button></a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
+            <div class="col-4 my-4">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{% static "images/pic2.jpg" %}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <a href="https://github.com/saraswoti2024/E-Commerce-Website"><button class="btn edit">Click to View</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 my-4">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{% static "images/pic2.jpg" %}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <a href="https://github.com/saraswoti2024/E-Commerce-Website"><button class="btn edit">Click to View</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 my-4">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{% static "images/pic2.jpg" %}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <a href="https://github.com/saraswoti2024/E-Commerce-Website"><button class="btn edit">Click to View</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -162,7 +214,7 @@
       <!-- contact us page -->
       <section class="my-4 ho" id="contact">
         <div class="contact text-center">
-          <h1 class="text-center text-black fw-bold text-capitalize">Connect with me</h1>
+          <h1 class="text-center text-black fw-bold text-capitalize">Contact Me</h1>
           <hr class="w-25 mx-auto text-black border-3 opacity-50">
         </div>
         <div class="container container1">
@@ -189,20 +241,16 @@
 
                 </form>
             </div>
-            <div class="col-7  ">
-              <h1 class="heading text-center text-success fw-bold">My Social Links</h1>
-              <a href="https://github.com/saraswoti2024"><button class="btn btn-outline-warning btn-lg text-black"><i class="fa-brands fa-github"></i>GitHub</button></a>
-              <a href="https://www.linkedin.com/in/saraswotikhadka1111/"><button class="mx-2 gap-5 btn btn-outline-warning btn-lg text-black"><i class="fa-brands fa-linkedin"></i> Linkedin</button></a>
-              <a href="https://www.instagram.com/saraswoti1110"><button class="gap-5 mx-2 btn btn-outline-warning btn-lg text-black"><i class="fa-brands fa-instagram"></i>Instagram</button></a>
-              <a href="https://x.com/Saraswoti1110"><button class="gap-5 mx-2 btn btn-outline-warning btn-lg text-black"><i class="fa-brands fa-x-twitter"></i>X-twitter</button></a>
-            </div>
+            <!-- <div class="col-7  ">
+              
+            </div> -->
           </div>
         </div>
       </section>
        <!-- contact us page ends -->
 
        <!-- footer -->
-        <h1 class="text-center text-capitalize fs-3">&copy; All Right Reserved</h1>
+        <h6 class="text-center text-capitalize">&copy;Developed By Saraswoti Khadka</h6>
 
        <!-- footer ends -->
 
@@ -211,7 +259,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
@@ -228,7 +276,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
+                    <button type="button" class="btn btn-primary">log in</button>
                   </div>
                 </div>
               </div>

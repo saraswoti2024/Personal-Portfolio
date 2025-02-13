@@ -30,5 +30,39 @@ body{
     box-shadow: 10px 10px 30px 20px rgb(255, 226, 255) ;
 }
 .main{
-    color: blanchedalmond;
+    --color: blanchedalmond;
+    font-size: 50px;
+}
+
+.cards{
+    background-color: antiquewhite;
+    box-shadow: 5px 5px 20px 10px rgb(255, 226, 255);
+    border: solid 1px rgb(0, 0, 0);
+    margin-bottom: 50px;
+    
+}
+
+.edit{
+    background-color: rgb(235, 221, 248);
+    border : solid 1px black;
+    border-radius: 10px;
+
+}
+.edit:hover{
+   color: rgb(254, 254, 255);
+   background-color: rgb(244, 210, 157);
+}
+
+.edits{
+    color: rgb(51, 48, 41);
+   background-color: rgb(249, 228, 195);
+   border: solid 1px black;
+
+}
+
+.edits:hover{
+    background-color: rgb(158, 135, 179);
+    border-radius: 10px;
+    border: solid 1px rgb(48, 48, 46);
+    color: rgb(255, 254, 227);
 }
