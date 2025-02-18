@@ -84,20 +84,21 @@
             <div class="col-3">
  
               <div class="d-flex flex-column mb-3 ">
-                <a href="https://github.com/saraswoti2024"><button class="btn btn-outline-warning btn-lg text-black mb-3"><i class="fa-brands fa-github"></i>GitHub</button></a>
-              <a href="https://www.linkedin.com/in/saraswotikhadka1111/"><button class=" btn btn-outline-warning btn-lg text-black mb-3"><i class="fa-brands fa-linkedin"></i> Linkedin</button></a>
-              <a href="https://www.instagram.com/saraswoti1110"><button class="gap-5 mx-2 btn btn-outline-warning btn-lg text-black mb-3"><i class="fa-brands fa-instagram"></i>Instagram</button></a>
-              <a href="https://x.com/Saraswoti1110"><button class="gap-5 mx-2 btn btn-outline-warning btn-lg text-black mb-3"><i class="fa-brands fa-x-twitter"></i>Twitter</button></a>
-              </div>
-              
-              
+                <a href="https://github.com/saraswoti2024" target="_blank"><button class="btn btn-outline-warning btn-lg text-black mb-3"><i class="fa-brands fa-github"></i>GitHub</button></a>
+              <a href="https://www.linkedin.com/in/saraswotikhadka1111/" target="_blank"><button class=" btn btn-outline-warning btn-lg text-black mb-3"><i class="fa-brands fa-linkedin"></i> Linkedin</button></a>
+              <a href="https://www.instagram.com/saraswoti1110" target="_blank"><button class="gap-5 mx-2 btn btn-outline-warning btn-lg text-black mb-3"><i class="fa-brands fa-instagram"></i>Instagram</button></a>
+              <a href="https://x.com/Saraswoti1110" target="_blank"><button class="gap-5 mx-2 btn btn-outline-warning btn-lg text-black mb-3"><i class="fa-brands fa-x-twitter"></i>Twitter</button></a>
+              <a href="mailto:saraswotikhadka2k2@gmail.com" target="_blank"><button class=" btn btn-outline-warning btn-lg text-black mb-3"><i class="fa-brands fa-linkedin"></i>emailHelp</button></a>
+              </div>      
             </div>
 
             <div class="col-5 d-flex justify-content-center align-items-center flex-column">
               <h2>I am <h1>Saraswoti Khadka</h1> </h2>
               <p class="text-start">I am a hardworking and enthusiastic individual. From a young age, I have been versatile and active, always eager to learn and explore new areas. My dedication to continuous improvement drives me to seek out new challenges and opportunities for growth.</p>
-              <a href="https://drive.google.com/file/d/1qZmL58uVI5K6yquvRqc7MD-S6FjUsnN8/view?usp=sharing"><button class="btn edits" data-bs-toggle="tooltip" data-bs-title="Click to View My Resume" 
+
+              <a href="https://drive.google.com/file/d/1qZmL58uVI5K6yquvRqc7MD-S6FjUsnN8/view?usp=sharing"  target="_blank"><button class="btn edits" data-bs-toggle="tooltip" data-bs-title="Click to View My Resume" 
               data-bs-custom-class="css_custom" data-bs-placement="top" >Resume</button></a>
+
             </div>
 
             <div class="col-4">
@@ -178,19 +179,27 @@
         <div class="container alert container1">
           <div class="row">
             <div class="col-5">
-              <form>
+              <form method="POST" {% url 'home' %}>
+                {% csrf_token %}
                 <div class="mb-3">
                   <label for="exampleInputfullname" class="form-label">Full Name</label>
-                  <input type="email" class="form-control" id="exampleInputfullname" aria-describedby="emailHelp">
+                  <input name="namekovalue" type="text" class="form-control" id="exampleInputfullname" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
+
                 <div class="mb-3">
                   <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="message"></textarea>
                     <label for="floatingTextarea2">Message</label>
+                  </div>
+                  <div class="mt-3">
+                    <label for="exampleInputgender" class="form-label">Gender: </label>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other"> other
                   </div>
                 <div class="mt-3">
                   <button class="btn btn-secondary">submit</button>
@@ -230,6 +239,11 @@
                         <label for="message-text" class="col-form-label">Email:</label>
                         <textarea class="form-control" id="message-text"></textarea>
                       </div>
+                      <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Gender:</label>
+                      <input type="radio" name="gender" value="male"> Male
+                      <input type="radio" name="gender" value="female"> Female
+                    </div>
                     </form>
                   </div>
                   <div class="modal-footer">
