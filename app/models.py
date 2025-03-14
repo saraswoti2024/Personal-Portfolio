@@ -8,7 +8,7 @@ gender_field=(
     ("other",'other')
 )
 class Users(models.Model):
-    fullname=models.CharField(max_length=50)
-    email=models.EmailField()
-    gender=models.CharField(null=True,max_length=200)
+    fullname=models.CharField(max_length=55)
+    email=models.EmailField(unique=True)
+    gender=models.CharField(choices=gender_field,null=True,max_length=200)
     message=models.TextField()

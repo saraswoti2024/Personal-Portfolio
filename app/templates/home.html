@@ -37,7 +37,6 @@
               <li class="nav-item">
                 <a class="nav-link" aria-disabled="true" href="#contact">Contact me</a>
               </li>
-              <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">login</button>
             </ul>
           </div>
         </div>
@@ -93,8 +92,8 @@
             </div>
 
             <div class="col-5 d-flex justify-content-center align-items-center flex-column">
-              <h2>I am <h1>Saraswoti Khadka</h1> </h2>
-              <p class="text-start">I am a hardworking and enthusiastic individual. From a young age, I have been versatile and active, always eager to learn and explore new areas. My dedication to continuous improvement drives me to seek out new challenges and opportunities for growth.</p>
+              <h2>I am <b><h1>Saraswoti Khadka</h1></b> </h2>
+              <p class="text-start ">I am a hardworking and enthusiastic individual. From a young age, I have been versatile and active, always eager to learn and explore new areas. My dedication to continuous improvement drives me to seek out new challenges and opportunities for growth.</p>
 
               <a href="https://drive.google.com/file/d/1qZmL58uVI5K6yquvRqc7MD-S6FjUsnN8/view?usp=sharing"  target="_blank"><button class="btn edits" data-bs-toggle="tooltip" data-bs-title="Click to View My Resume" 
               data-bs-custom-class="css_custom" data-bs-placement="top" >Resume</button></a>
@@ -124,8 +123,8 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">p1</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquam laudantium doloremque molestias accusantium quos unde sequi ratione, nostrum, atque in nihil illo, voluptate dolorem numquam deleniti optio vitae distinctio!</p>
+                      <h5 class="card-title">E-commerce Website</h5>
+                      <p class="card-text">E-commerce website where you can buy luxuries items based in Nepal .Admin can add,delete the product. Data of users are stored </p>
                       <a href="https://github.com/saraswoti2024/E-Commerce-Website"><button class="btn edit">Click to View</button></a>
                     </div>
                   </div>
@@ -136,12 +135,12 @@
               <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src="{% static "images/pic2.jpg" %}" class="img-fluid rounded-start" alt="...">
+                    <img src="{% static "images/ward2.jpeg" %}" class="img-fluid rounded-start" alt="..." width="600px" height="600px">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">p2</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis optio repellat ipsam asperiores voluptatem consequuntur natus doloremque a nesciunt veritatis perferendis, cum id esse ipsa possimus laboriosam voluptatum delectus.</p>
+                      <h5 class="card-title">MeroWard</h5>
+                      <p class="card-text">Mero Ward is an appointment scheduling system where user can directly get appointment from ward officer and when the appointment is schedule they can directly go there.</p>
                       <a href="https://github.com/saraswoti2024/E-Commerce-Website"><button class="btn edit">Click to View</button></a>
                     </div>
                   </div>
@@ -152,12 +151,12 @@
               <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src="{% static "images/pic2.jpg" %}" class="img-fluid rounded-start" alt="...">
+                    <img src="{% static "images/event.jpeg" %}" class="img-fluid rounded-start" alt="...">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">p3</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quas veritatis vero hic vel? Enim dignissimos laudantium molestias perspiciatis est reiciendis soluta! Mollitia fugit unde nihil, animi natus debitis laborum.</p>
+                      <h5 class="card-title">Event Manager in Local Area</h5>
+                      <p class="card-text">Event manager is a system where the events happening in the community is shown and can be posted by local people if they are doing some gatherings.</p>
                       <a href="https://github.com/saraswoti2024/E-Commerce-Website"><button class="btn edit">Click to View</button></a>
                     </div>
                   </div>
@@ -168,7 +167,18 @@
       <!-- projects section ends -->
       
       <!-- blog page starts -->
-       
+       <div class="section" id="blog">
+        <div class="contact text-center">
+          <h1 class="text-center text-black fw-bold text-capitalize">My Blogs</h1>
+        </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+               <b><h1 class="text-center text-danger">Coming Soon......</h1></b>
+              </div>
+            </div>
+          </div>
+       </div>
        <!-- blog page ends -->
       <!-- contact us page -->
       <section class="my-4 ho" id="contact">
@@ -176,11 +186,16 @@
           <h1 class="text-center text-black fw-bold text-capitalize">Contact Me</h1>
           <hr class="w-25 mx-auto text-black border-3 opacity-50">
         </div>
-        <div class="container alert container1">
+        <div class="container alert container1" >
           <div class="row">
             <div class="col-5">
-              <form method="POST" {% url 'home' %}>
+              <form method="POST" action="{% url 'home' %}#contact" >
                 {% csrf_token %}
+                {% if messages %}
+                  {% for message in messages %}
+                    <div class="alert alert-{{message.tags}}">{{message}}</div>
+                  {% endfor %}
+                {% endif %}
                 <div class="mb-3">
                   <label for="exampleInputfullname" class="form-label">Full Name</label>
                   <input name="namekovalue" type="text" class="form-control" id="exampleInputfullname" aria-describedby="emailHelp">
@@ -217,42 +232,9 @@
        <!-- contact us page ends -->
 
        <!-- footer -->
-        <h6 class="text-center text-capitalize">&copy;Developed By Saraswoti Khadka</h6>
+        <b><h6 class="text-center text-capitalize my-4 mx-5">&copy;Developed By Saraswoti Khadka</h6></b>
 
        <!-- footer ends -->
-
-            <!-- modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Name:</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                      </div>
-                      <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Email:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                      </div>
-                      <div class="mb-3">
-                      <label for="message-text" class="col-form-label">Gender:</label>
-                      <input type="radio" name="gender" value="male"> Male
-                      <input type="radio" name="gender" value="female"> Female
-                    </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">log in</button>
-                  </div>
-                </div>
-              </div>
-            </div>
 
     <!-- js bootstrap link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
